@@ -34,7 +34,7 @@ public class MutantController {
     @ApiOperation(value = "Validates a mutant", notes = "This service validates a mutant based on the given DNA")
     public ResponseEntity isMutant(@RequestBody MutantRequestDTO mutantRequestDTO) {
         mutantRequestDTO.setMutant(mutantService.isMutant(mutantRequestDTO.getDna()));
-        mutantService.persistDNA(mutantRequestDTO);
+        mutantService.process(mutantRequestDTO);
         if(mutantRequestDTO.isMutant()){
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
