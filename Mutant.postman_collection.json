@@ -1,0 +1,58 @@
+{
+	"info": {
+		"name": "Mutant",
+		"_postman_id": "0069c9c0-a7dc-a959-c632-c105951b65f1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post a DNA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dna\": [\"TTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"ATCGTA\",\"TCACTG\"]\n}"
+				},
+				"url": {
+					"raw": "{{env}}/mutant/",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"mutant",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{env}}/mutant/stats",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"mutant",
+						"stats"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
